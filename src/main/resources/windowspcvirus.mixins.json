@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "windowspcvirus.windowspcvirus.windowspcvirusmixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [],
+  "client": [
+   "BakedSpriteAccessor",
+   "ChatHudMixin",
+   "ClientWorldMixin",
+   "GameRenderMixin",
+   "RedstoneLevelAccessor",
+   "SessionAccessor",
+   "WorldRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

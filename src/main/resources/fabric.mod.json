@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "windowspcvirus",
+  "version": "1.2",
+  "name": "Windowspcvirus",
+  "description": "This is not a virus, all it does is delete windows, built using https://github.com/Bulldog83/JustMap/",
+  "authors": [
+    "Sciath"
+  ],
+  "contact": {},
+  "license": "GPL3",
+  "icon": "assets/windowspcvirus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "windowspcvirus.windowspcvirus.client.WindowspcvirusClient"
+    ],
+    "main": [
+      "windowspcvirus.windowspcvirus.Windowspcvirus"
+    ]
+  },
+  "custom": {
+  },
+  "mixins": [
+    "windowspcvirus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}
