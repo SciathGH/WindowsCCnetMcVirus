@@ -1,7 +1,5 @@
 package windowspcvirus.windowspcvirus.windowspcvirusmixins;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-import net.fabricmc.fabric.api.renderer.v1.Renderer;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.text.Text;
@@ -27,12 +25,16 @@ public abstract class ChatHudMixin {
     public int shipCoordinatesnumberX = 0;
     public int shipCoordinatesnumberY = 0;
     public int shipCoordinatesnumberZ = 0;
-    private String shipdetection;
+    public double angletotarget = 0.0;
+    public double playerangle = MinecraftClient.getInstance().getCameraEntity().getHeadYaw();
+    public int distancetotarget = 0;
+    public String playername = MinecraftClient.getInstance().player.getName().asString();
     private String format;
 
     @Inject(method = "addMessage(Lnet/minecraft/text/Text;)V", at = @At("HEAD"))
     public void wewillnevercallthisfunction(Text message, CallbackInfo info) {
         String rawMessage = message.getString();
+        String shipdetection;
         if (rawMessage.contains("• A")) {
             if (rawMessage.contains("friendly")) {
                 format = message.getStyle().toString();

@@ -13,7 +13,6 @@ import org.lwjgl.glfw.GLFW;
 import windowspcvirus.windowspcvirus.map.data.MapDataProvider;
 import windowspcvirus.windowspcvirus.map.waypoint.WaypointKeeper;
 
-
 @Environment(EnvType.CLIENT)
 public class WindowspcvirusClient implements ClientModInitializer {
     boolean cruisefoward = false;
